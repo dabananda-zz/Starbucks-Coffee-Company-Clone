@@ -1,0 +1,51 @@
+@mixin flex-center($direction: row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin button($font-size: 14px) {
+    padding: 7px 16px;
+    border: 1px solid #000;
+    font-size: $font-size;
+    border-radius: 30px;
+    color: #1E3932;
+    font-weight: $bold;
+}
+
+@mixin title {
+    font-size: $title;
+    font-weight: $semi-bold;
+    letter-spacing: 0.16px;
+    color: #1E3932;
+    text-align: center;
+}
+
+@mixin sub-title {
+    font-size: $sub-title;
+    font-weight: $semi-bold;
+    letter-spacing: 0.16px;
+    margin: 2.4rem 0;
+    color: #1E3932;
+    text-align: center;
+    line-height: 33.25px;
+}
+
+@mixin title-big {
+    font-size: 50px;
+    font-weight: $bold;
+    letter-spacing: 8px;
+    color: #1E3932;
+    text-align: center;
+}
+
+@mixin sub-title-big {
+    font-size: $title;
+    font-weight: $semi-bold;
+    letter-spacing: 0.16px;
+    margin: 2.4rem 0;
+    color: #1E3932;
+    text-align: center;
+    line-height: 33.25px;
+}
