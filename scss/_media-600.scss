@@ -1,0 +1,88 @@
+@media (max-width: 600px) {
+
+    .notice {
+        padding: 2rem 0;
+    }
+
+    .notice p {
+        width: 90%;
+        font-size: 16px !important;
+    }
+
+    .food-menu {
+        width: 100%;
+        margin: 0 auto 2rem auto;
+        display: block !important;
+    
+        .item-image {
+            width: 100% !important;
+    
+            img {
+                width: 100%;
+                display: block;
+            }
+        }
+
+        .item-info {
+            width: 100% !important;
+            padding: 32px 15px;
+            @include flex-center(column);
+
+            .title {
+                font-size: 19px;
+            }
+            .sub-title {
+                font-size: 16px;
+            }
+
+            .title-big {
+                letter-spacing: 1.5;
+            }
+
+            .sub-title-big {
+                font-weight: 500;
+                font-size: 19px !important;
+            }
+        }
+    }
+
+    .order .food-menu .item-info, .order .food-menu .item-info-big {
+        padding: 1rem;
+    }
+    
+    .order {
+        grid-template-columns: 1fr;
+    }
+
+    .accordion-tab label {
+        font-size: 16px;
+        font-weight: 400;
+        padding: 1.5rem !important;
+    }
+
+    .accordion-content ul li a {
+        font-size: 15px !important;
+    }
+
+    .notice-2 {
+        padding: 2rem 1rem;
+    }
+
+    .location a {
+        font-size: 18px !important;
+    }
+
+    .btn-list a {
+        font-size: 14px;
+        font-weight: 400;
+        padding: 5px !important;
+    }
+    
+    footer {
+        width: 90%;
+
+        .copyright {
+            font-size: 14px;
+        }
+    }
+}

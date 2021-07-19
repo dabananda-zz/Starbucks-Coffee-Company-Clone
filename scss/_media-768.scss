@@ -1,0 +1,236 @@
+@media (max-width: 768px) {
+    header {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .notice {
+        margin-top: 63px;
+    }
+
+    html, body {
+        overflow-x: hidden;
+        height: 100%;
+    }
+    
+    .header {
+        background-color: #fff;
+        width: 100%;
+        height: 83px;
+        position: fixed;
+        z-index: 10;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+    
+    .header {
+        display: flex;
+        align-items: center;
+    }
+    
+    .header .logo {
+        padding-left: 2rem;
+    }
+    
+    .header .logo img {
+        width: 50px;
+    }
+    
+    .toogle-menu {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 25px;
+        right: 2rem;
+        z-index: 20;
+        cursor: pointer;
+    }
+    
+    .spinner {
+        background-color: #000;
+        height: 3px;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+    
+    #menu:checked ~ .toogle-menu > .spinner.middle {
+        opacity: 0;
+    }
+    
+    #menu:checked ~ .toogle-menu > .spinner.top {
+        transform: rotate(135deg);
+        margin-top: 15px;
+    }
+    
+    #menu:checked ~ .toogle-menu > .spinner.bottom {
+        transform: rotate(-135deg);
+        margin-top: -16px;
+    }
+    
+    #menu:checked ~ .sidebarMenu, #nested:checked ~ .menu-2 {
+        transform: translateX(0);
+    }
+    
+    #nested:checked ~ label > .fa-chevron-right {
+        transform: rotate(180deg);
+    }
+    
+    .fa-chevron-right {
+        transition: all 0.3s ease;
+    }
+    
+    .sidebarMenu, .menu-2 {
+        height: 100%;
+        width: 80vw;
+        margin-top: 83px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: #fff;
+        border-left: 1px solid rgb(235, 227, 227);
+        transform: translateX(80vw);
+        transition: all 0.3s ease;
+    }
+    
+    .sidebarMenu ul, .menu-2 ul {
+        padding: 1rem 2rem 3rem 2rem;
+    }
+    
+    .sidebarMenu ul li, .menu-2 ul li {
+        margin-bottom: 2rem;
+    }
+    
+    .sidebarMenu ul li a, .menu-2 ul li a {
+        color: #000;
+        font-size: 24px;
+    }
+    
+    .nested-menu label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 24px;
+        cursor: pointer;
+    }
+    
+    .nested-menu input {
+        visibility: hidden;
+    }
+    
+    .btn-list {
+        margin-top: 2rem;
+    }
+    
+    .btn {
+        padding: 7px 16px !important;
+        border: 1px solid #000 !important;
+        font-size: 16px !important;
+        border-radius: 30px !important;
+        color: #1E3932 !important;
+        font-weight: 500 !important;
+    }
+    
+    .btn-black {
+        background-color: #000 !important;
+        color: #fff !important;
+        margin-left: 1rem;
+    }
+
+
+    .title-big {
+        font-size: 28px !important;
+        letter-spacing: 5px;
+        font-weight: 700;
+    }
+
+    .sub-title-big {
+        font-size: 24px !important;
+    }
+
+    .f-links {
+
+        ul {
+            display: block !important;
+
+            li {
+                a {
+                    font-weight: 400 !important;
+                }
+            }
+
+            span {
+                visibility: hidden;
+            }
+        }
+    }
+
+    .links {
+        display: none;
+    }
+    
+    .links-accordion {
+        display: block;
+        font-size: 20px;
+        box-shadow: 0 -1px 3px -1px rgb(107, 102, 102);
+
+        .accordion-tab {
+            display: block;
+
+            input {
+                display: none;
+            }
+
+            label {
+                display: block;
+                position: relative;
+                padding: 2rem;
+                font-weight: 600;
+
+                i {
+                    position: absolute;
+                    right: 2rem;
+                }
+            }
+
+            .accordion-content {
+                max-height: 0;
+                overflow: hidden;
+                transition: all 0.5s ease;
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 400;
+
+                li {
+                    margin-bottom: 2rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                a {
+                    color: gray;
+
+                    &:hover {
+                        color: #000;
+                    }
+                }
+
+                ul {
+                    padding: 0 2rem;
+                }
+            }
+
+            .accordion-toggle:checked ~ .accordion-content {
+                max-height: 100vh;
+            }
+            .fa-chevron-down {
+                transition: all 0.3s ease;
+            }
+            .accordion-toggle:checked ~ label > .fa-chevron-down {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
